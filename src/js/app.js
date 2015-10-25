@@ -2,7 +2,7 @@ var app = angular.module('weather', ['ngRoute'])
 
 app.controller('mainController', ['$scope', 'weatherFactory', function($scope, weatherFactory) {
     $scope.weather = null;
-    weatherFactory.jsonnn().success(function(response) {
+    weatherFactory.json().success(function(response) {
         $scope.weather = response;
     });
 }]);
@@ -10,7 +10,7 @@ app.controller('mainController', ['$scope', 'weatherFactory', function($scope, w
 // Factory returns the JSON file of the city.
 app.factory('weatherFactory', ['$http', function($http) {
     var weatherJson = {};
-    weatherJson.jsonnn = function () {
+    weatherJson.json = function () {
         return $http.get('http://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=d59ec95d5562a7eced9ca8454c2115e2');
     }
     return weatherJson;
@@ -28,9 +28,6 @@ app.filter('weatherFilter', function() {
     return function (input) {
         var weather = null;
 
-        console.log(input);
-
-
         switch(input) {
             case 'Clear':
                 weather = 'sun';
@@ -47,3 +44,9 @@ app.filter('weatherFilter', function() {
 });
 
 // create a directive for the weather li. This will allow me to do the clothes.
+//
+app.directive('weatherInterval', function(){
+    return {
+        template: "<div class='james'>aass</div>"
+    }
+});

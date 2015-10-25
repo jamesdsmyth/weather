@@ -9,6 +9,7 @@
         <h1>{{ weather.city.name }} Weather</h1>
         <ul class="weather">
             <li class="interval" ng-repeat="interval in weather.list">
+                <weather-interval></weather-interval>
                 <div class="temp-{{ interval.main.temp | celciusFilter }} box">
                     <div class="temperature">
                         <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ interval.weather[0].main | weatherFilter: interval.weather[0].main }}-75.png" title="Clouds" width="75">
