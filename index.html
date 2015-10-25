@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="weather">
+    <head>
+        <title>Weather</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body ng-controller="mainController">
+        <h1>{{ weather.city.name }} Weather</h1>
+        <ul class="weather">
+            <li class="interval" ng-repeat="interval in weather.list">
+                <div class="temp-{{ interval.main.temp | celciusFilter }} box">
+                    <div class="temperature">
+                        <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ interval.weather[0].main | weatherFilter: interval.weather[0].main }}-75.png" title="Clouds" width="75">
+                        <p>
+                            <span>{{ interval.dt * 1000 | date:'HH:mma' }}</span>
+                            <span>{{ interval.dt * 1000 | date:'EEEE, MMMM d' }}</span>
+                        </p>
+                        <!-- <p>
+                            Temperature: {{ interval.main.temp | celciusFilter }}
+                        </p> -->
+                    </div>
+                    <div class="clothes">
+                        <!-- <img src="" class="head" />
+                        <img src="" class="torso" />
+                        <img src="" class="feet" /> -->
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.min.js"></script>
+        <script src="src/js/app.js"></script>
+    </body>
+</html>

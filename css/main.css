@@ -1,0 +1,108 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Weather */
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em; }
+  html h1 {
+    font-size: 2em;
+    padding: 1em 0;
+    text-align: center; }
+  html .weather {
+    width: 100%; }
+    html .weather .interval {
+      width: 100%;
+      float: left;
+      display: block; }
+      html .weather .interval .box {
+        height: 100%;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center; }
+        html .weather .interval .box.temp-4 {
+          background: #0013eb; }
+        html .weather .interval .box.temp-5 {
+          background: #0343ad; }
+        html .weather .interval .box.temp-6 {
+          background: #0046b8; }
+        html .weather .interval .box.temp-7 {
+          background: #025da3; }
+        html .weather .interval .box.temp-8 {
+          background: #01738b; }
+        html .weather .interval .box.temp-9 {
+          background: #018a76; }
+        html .weather .interval .box.temp-10 {
+          background: #01a25e; }
+        html .weather .interval .box.temp-11 {
+          background: #00d232; }
+        html .weather .interval .box.temp-12 {
+          background: #28e800; }
+        html .weather .interval .box.temp-13 {
+          background: #c3ff04; }
+        html .weather .interval .box.temp-14 {
+          background: #ebff00; }
+        html .weather .interval .box.temp-15 {
+          background: #fff901; }
+        html .weather .interval .box.temp-16 {
+          background: #feed09; }
+        html .weather .interval .box.temp-17 {
+          background: #ffde00; }
+        html .weather .interval .box.temp-18 {
+          background: #ffd600; }
+        html .weather .interval .box.temp-19 {
+          background: #f8d308; }
+        html .weather .interval .box.temp-20 {
+          background: #ffc500; }
+        html .weather .interval .box.temp-21 {
+          background: #ffbf01; }
+        html .weather .interval .box .temperature img {
+          margin-bottom: 15px; }
+        html .weather .interval .box .temperature span {
+          display: block;
+          clear: both;
+          margin-bottom: 10px; }
