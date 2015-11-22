@@ -16,10 +16,10 @@ app.controller('mainController', ['$scope', 'weatherFactory', 'locationFactory',
 app.factory('weatherFactory', ['$http', function ($http) {
     var weather = {};
     weather.urlStart = 'http://api.openweathermap.org/data/2.5/forecast?q=';
-    weather.urlEnd =  ',us&mode=json&appid=2de143494c0b295cca9337e1e96b00e0';
-    weather.json = function (city) {
+    weather.urlEnd =  ',&mode=json&appid=2de143494c0b295cca9337e1e96b00e0';
+    weather.json = function (city, country) {
         var cityModified = city.replace(/ /g,'');
-        return $http.get(weather.urlStart + cityModified + weather.urlEnd);
+        return $http.get(weather.urlStart + cityModified + ',' + country + weather.urlEnd);
     }
     return weather;
 }]);
@@ -51,6 +51,7 @@ app.filter('weatherFilter', function () {
     return function (input) {
         var weather = null;
 
+        console.log(input);
         switch (input) {
             case 'Clear':
                 weather = 'sun';
@@ -61,17 +62,10 @@ app.filter('weatherFilter', function () {
             case 'Rain':
                 weather = 'rain';
                 break;
+            case 'Snow':
+                weather = 'snow';
+                break;
         }
         return input = weather;
-    }
-});
-
-// create a directive for the weather li. This will allow me to do the clothes.
-//
-app.directive('weatherInterval', function(){
-    return {
-        restrict: 'E',
-        require: 'mainController',
-        template: "<div class='james'>{{ interval.dt * 1000 }}</div>"
     }
 });
