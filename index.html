@@ -10,15 +10,16 @@
         <select name="mySelect"
                 id="locations"
                 ng-options="location as location for (location, obj) in locations[0]"
-                ng-model="selected">
+                ng-change="setCity()"
+                ng-model="citySelect">
         </select>
-        <input ng-model="cityInput" type="text" />
+        <!-- <input ng-model="cityInput" type="text" />
         <ul>
             <li ng-repeat="(location, value) in locations[0] | filter:cityInput" >
                 {{ location }}
             </li>
-        </ul>
-        <p>{{ locations }}</p>
+        </ul> -->
+        <!-- <p>{{ locations }}</p> -->
         <ul class="weather">
             <li class="interval" ng-repeat="interval in weather.list">
                 <!-- <weather-interval></weather-interval> -->

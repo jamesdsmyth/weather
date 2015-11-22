@@ -73,8 +73,29 @@ html {
                 padding: 20px 0;
                 text-align: center;
 
+				&.temp--7 {
+                    background: #a378bf;
+					color: #e2e2e2;
+                }
+
+				&.temp--6 {
+                    background: #a575bf;
+					color: #e2e2e2;
+                }
+
+				&.temp--5 {
+                    background: #8b48a7;
+					color: #e2e2e2;
+                }
+
+				&.temp--4 {
+                    background: #732fa0;
+					color: #e2e2e2;
+                }
+
 				&.temp--3 {
                     background: #772f9f;
+					color: #e2e2e2;
                 }
 
 				&.temp--2 {
@@ -185,7 +206,7 @@ html {
                     img {
                         margin-bottom: 15px;
                     }
-					
+
                     span {
                         display: block;
                         clear: both;

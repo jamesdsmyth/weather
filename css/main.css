@@ -64,8 +64,21 @@ html {
         width: 100%;
         padding: 20px 0;
         text-align: center; }
+        html .weather .interval .box.temp--7 {
+          background: #a378bf;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp--6 {
+          background: #a575bf;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp--5 {
+          background: #8b48a7;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp--4 {
+          background: #732fa0;
+          color: #e2e2e2; }
         html .weather .interval .box.temp--3 {
-          background: #772f9f; }
+          background: #772f9f;
+          color: #e2e2e2; }
         html .weather .interval .box.temp--2 {
           background: #631994;
           color: #e2e2e2; }

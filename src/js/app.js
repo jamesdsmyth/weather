@@ -2,37 +2,26 @@ var app = angular.module('weather', ['ngRoute'])
 
 app.controller('mainController', ['$scope', 'weatherFactory', 'locationFactory', function ($scope, weatherFactory, locationFactory) {
     $scope.weather = null;
-    weatherFactory.json().success(function(response) {
-        $scope.weather = response;
-    });
-
     $scope.locations = locationFactory.list;
-    // {
-    //     'Perugia': {
-    //         country: [
-    //             "IT"
-    //          ]
-    //     },
-    //     'New Brunswick': {
-    //         state: [
-    //             "NJ"
-    //         ]
-    //     },
-    //     'Vicenza': {
-    //         country: [
-    //             "IT"
-    //         ]
-    //     }
-    // };
+
+    $scope.setCity = function () {
+        weatherFactory.json($scope.citySelect).success(function(response) {
+            $scope.weather = response;
+        });
+        console.log($scope.citySelect);
+    }
 }]);
 
 // Factory returns the JSON file of the weather
 app.factory('weatherFactory', ['$http', function ($http) {
-    var weatherJson = {};
-    weatherJson.json = function () {
-        return $http.get('http://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=d59ec95d5562a7eced9ca8454c2115e2');
+    var weather = {};
+    weather.urlStart = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+    weather.urlEnd =  ',us&mode=json&appid=2de143494c0b295cca9337e1e96b00e0';
+    weather.json = function (city) {
+        var cityModified = city.replace(/ /g,'');
+        return $http.get(weather.urlStart + cityModified + weather.urlEnd);
     }
-    return weatherJson;
+    return weather;
 }]);
 
 // Factory returns the cities
