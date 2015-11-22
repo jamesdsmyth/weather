@@ -64,8 +64,29 @@ html {
         width: 100%;
         padding: 20px 0;
         text-align: center; }
+        html .weather .interval .box.temp--3 {
+          background: #772f9f; }
+        html .weather .interval .box.temp--2 {
+          background: #631994;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp--1 {
+          background: #510086;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp-0 {
+          background: #410b6d;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp-1 {
+          background: #3e0085;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp-2 {
+          background: #2a017b;
+          color: #e2e2e2; }
+        html .weather .interval .box.temp-3 {
+          background: #01007f;
+          color: #e2e2e2; }
         html .weather .interval .box.temp-4 {
-          background: #0013eb; }
+          background: #0000ba;
+          color: #e2e2e2; }
         html .weather .interval .box.temp-5 {
           background: #0343ad; }
         html .weather .interval .box.temp-6 {

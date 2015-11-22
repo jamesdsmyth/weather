@@ -7,19 +7,29 @@
     </head>
     <body ng-controller="mainController">
         <h1>{{ weather.city.name }} Weather</h1>
+        <select name="mySelect"
+                id="locations"
+                ng-options="location as location for (location, obj) in locations[0]"
+                ng-model="selected">
+        </select>
+        <input ng-model="cityInput" type="text" />
+        <ul>
+            <li ng-repeat="(location, value) in locations[0] | filter:cityInput" >
+                {{ location }}
+            </li>
+        </ul>
+        <p>{{ locations }}</p>
         <ul class="weather">
             <li class="interval" ng-repeat="interval in weather.list">
-                <weather-interval></weather-interval>
+                <!-- <weather-interval></weather-interval> -->
                 <div class="temp-{{ interval.main.temp | celciusFilter }} box">
                     <div class="temperature">
-                        <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ interval.weather[0].main | weatherFilter: interval.weather[0].main }}-75.png" title="Clouds" width="75">
+                        <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ interval.weather[0].main | weatherFilter: interval.weather[0].main }}-75.png" width="75">
+                        <span>{{ interval.main.temp | celciusFilter }} &deg;c</span>
                         <p>
                             <span>{{ interval.dt * 1000 | date:'HH:mma' }}</span>
                             <span>{{ interval.dt * 1000 | date:'EEEE, MMMM d' }}</span>
                         </p>
-                        <!-- <p>
-                            Temperature: {{ interval.main.temp | celciusFilter }}
-                        </p> -->
                     </div>
                     <div class="clothes">
                         <!-- <img src="" class="head" />

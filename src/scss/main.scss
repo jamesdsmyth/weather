@@ -73,8 +73,43 @@ html {
                 padding: 20px 0;
                 text-align: center;
 
+				&.temp--3 {
+                    background: #772f9f;
+                }
+
+				&.temp--2 {
+                    background: #631994;
+					color: #e2e2e2;
+                }
+
+				&.temp--1 {
+                    background: #510086;
+					color: #e2e2e2;
+                }
+
+				&.temp-0 {
+                    background: #410b6d;
+					color: #e2e2e2;
+                }
+
+				&.temp-1 {
+                    background: #3e0085;
+					color: #e2e2e2;
+                }
+
+				&.temp-2 {
+                    background: #2a017b;
+					color: #e2e2e2;
+                }
+
+				&.temp-3 {
+                    background: #01007f;
+					color: #e2e2e2;
+                }
+
                 &.temp-4 {
-                    background: #0013eb;
+                    background: #0000ba;
+					color: #e2e2e2;
                 }
 
                 &.temp-5 {
@@ -146,9 +181,11 @@ html {
                 }
 
                 .temperature {
+
                     img {
                         margin-bottom: 15px;
                     }
+					
                     span {
                         display: block;
                         clear: both;
