@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="weather">
     <head>
-        <title>Weather</title>
+        <title>Weather Rainbow</title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
@@ -9,20 +9,13 @@
         <h1>{{ weather.city.name }} Weather</h1>
         <select name="mySelect"
                 id="locations"
-                ng-options="location as location for (location, obj) in locations[0]"
+                ng-options="location as location for (location, obj) in locations | orderBy:'location'"
                 ng-change="setCity()"
                 ng-model="citySelect">
         </select>
-        <!-- <input ng-model="cityInput" type="text" />
-        <ul>
-            <li ng-repeat="(location, value) in locations[0] | filter:cityInput" >
-                {{ location }}
-            </li>
-        </ul> -->
-        <!-- <p>{{ locations }}</p> -->
+
         <ul class="weather">
             <li class="interval" ng-repeat="interval in weather.list">
-                <!-- <weather-interval></weather-interval> -->
                 <div class="temp-{{ interval.main.temp | celciusFilter }} box">
                     <div class="temperature">
                         <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ interval.weather[0].main | weatherFilter: interval.weather[0].main }}-75.png" width="75">
