@@ -1,7 +1,7 @@
-Lets grow
+Weather rainbow
 =====================
 
-A simple weather app using AngularJS that visually shows you the weather temperature using colours instead of numbers. This is just a fun little project to see whether we visualise and understand the temperature better using a colour than if we had just read the temperature.
+Weather rainbow is a simple application using AngularJS that visually shows you the weather temperature using colours instead of numbers. This is just a fun little project to see whether we visualise and understand the temperature better using a colour than if we had just read the temperature.
 
 ### How to run
 
