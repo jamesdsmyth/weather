@@ -52,12 +52,54 @@ table {
 html {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+	color: #3d3d3d;
 
-    h1 {
-        font-size: 2em;
-        padding: 1em 0;
-        text-align: center;
-    }
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		background: rgba(255, 255, 255, 0.5);
+
+		.locations {
+			float: left;
+		}
+
+		h1 {
+			float: left;
+	        // font-size: 2em;
+	        // padding: 1em 0;
+	        // text-align: center;
+	    }
+	}
+
+	.intro {
+		width: 100%;
+		margin-top: 100px;
+		background: red;
+	    padding: 20px 0;
+		background: #e8ffa6;
+		float: left;
+
+		.intro-text {
+			float: left;
+			margin: 16px 20px 0;
+			font-size: 2em;
+			display: block;
+		}
+
+		.locations {
+			color: #3d3d3d;
+			float: left;
+			background: transparent;
+			font-size: 2em;
+			height: 50px;
+		    margin-top: 8px;
+			width: 300px;
+			font-family: 'Open Sans', sans-serif;
+		}
+	}
 
     .weather {
         width: 100%;
@@ -66,6 +108,11 @@ html {
             width: 100%;
             float: left;
             display: block;
+			margin-bottom: 10px;
+
+			// &:first-child {
+			//     padding-top: 100px;
+			// }
 
             .box {
                 height: 100%;
@@ -74,131 +121,235 @@ html {
                 text-align: center;
 
 				&.temp--7 {
-                    background: #a378bf;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp--6 {
-                    background: #a575bf;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp--5 {
-                    background: #8b48a7;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp--4 {
-                    background: #732fa0;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp--3 {
-                    background: #772f9f;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp--2 {
-                    background: #631994;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp--1 {
-                    background: #510086;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp-0 {
-                    background: #410b6d;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp-1 {
-                    background: #3e0085;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp-2 {
-                    background: #2a017b;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
 				&.temp-3 {
-                    background: #01007f;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
                 &.temp-4 {
-                    background: #0000ba;
-					color: #e2e2e2;
+                    background: #74cafe;
                 }
 
                 &.temp-5 {
-                    background: #0343ad;
+                    background: #74cafe;
                 }
 
                 &.temp-6 {
-                    background: #0046b8;
+                    background: #95f7fe;
                 }
 
                 &.temp-7 {
-                    background: #025da3;
+                    background: #95f7fe;
                 }
 
                 &.temp-8 {
-                    background: #01738b;
+                    background: #95f7fe;
                 }
 
                 &.temp-9 {
-                    background: #018a76;
+                    background: #95f7fe;
                 }
 
                 &.temp-10 {
-                    background: #01a25e;
+                    background: #95f7fe;
                 }
 
                 &.temp-11 {
-                    background: #00d232;
+                    background: #bdffe4;
                 }
 
                 &.temp-12 {
-                    background: #28e800;
+                    background: #bdffe4;
                 }
 
                 &.temp-13 {
-                    background: #c3ff04;
+                    background: #bdffe4;
                 }
 
                 &.temp-14 {
-                    background: #ebff00;
+                    background: #e0ffb0;
                 }
 
                 &.temp-15 {
-                    background: #fff901;
+                    background: #e0ffb0;
                 }
 
                 &.temp-16 {
-                    background: #feed09;
+                    background: #e0ffb0;
                 }
 
                 &.temp-17 {
-                    background: #ffde00;
+                    background: #e7ffa4;
                 }
 
                 &.temp-18 {
-                    background: #ffd600;
+                    background: #e7ffa4;
                 }
 
                 &.temp-19 {
-                    background: #f8d308;
+                    background: #e7ffa4;
                 }
 
                 &.temp-20 {
-                    background: #ffc500;
+                    background: #f8ff84;
                 }
 
                 &.temp-21 {
-                    background: #ffbf01;
+                    background: #f8ff84;
+                }
+
+				&.temp-22 {
+                    background: #f8ff84;
+                }
+
+				&.temp-23 {
+                    background: #fff754;
+                }
+
+				&.temp-24 {
+                    background: #fff754;
+                }
+
+				&.temp-25 {
+                    background: #fecc00;
+                }
+
+				&.temp-26 {
+                    background: #fecc00;
+                }
+
+				&.temp-27 {
+                    background: #fecc00;
+                }
+
+				&.temp-28 {
+                    background: #fecc00;
+                }
+
+				&.temp-29 {
+                    background: #ffac00;
+                }
+
+				&.temp-30 {
+                    background: #ffac00;
+                }
+
+				&.temp-31 {
+                    background: #ffac00;
+                }
+
+				&.temp-32 {
+                    background: #ffac00;
+                }
+
+				&.temp-33 {
+                    background: #ffac00;
+                }
+
+				&.temp-34 {
+                    background: #ff7c00;
+                }
+
+				&.temp-35 {
+                    background: #ff7c00;
+                }
+
+				&.temp-36 {
+                    background: #ff7c00;
+                }
+
+				&.temp-37 {
+                    background: #ff7c00;
+                }
+
+				&.temp-38 {
+                    background: #ff7c00;
+                }
+
+				&.temp-39 {
+                    background: #ff5e00;
+                }
+
+				&.temp-40 {
+                    background: #ff5e00;
+                }
+
+				&.temp-41 {
+                    background: #ff5e00;
+                }
+
+				&.temp-42 {
+                    background: #ff5e00;
+                }
+
+				&.temp-43 {
+                    background: #ff4600;
+                }
+
+				&.temp-44 {
+                    background: #ff4600;
+                }
+
+				&.temp-45 {
+                    background: #ff4600;
+                }
+
+				&.temp-46 {
+                    background: #ff4600;
+                }
+
+				&.temp-47 {
+                    background: #ff2b00;
+                }
+
+				&.temp-48 {
+                    background: #ff2b00;
+                }
+
+				&.temp-49 {
+                    background: #ff2b00;
+                }
+
+				&.temp-50 {
+                    background: #ff2b00;
                 }
 
                 .temperature {
@@ -217,3 +368,28 @@ html {
         }
     }
 }
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.semi-square {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+.blue    { background-color: #3b8ec2; }
+.blue select    { color: #fff; }

@@ -48,95 +48,197 @@ table {
 /* Weather */
 html {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em; }
-  html h1 {
-    font-size: 2em;
-    padding: 1em 0;
-    text-align: center; }
+  font-size: 1em;
+  color: #3d3d3d; }
+  html header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); }
+    html header .locations {
+      float: left; }
+    html header h1 {
+      float: left; }
+  html .intro {
+    width: 100%;
+    margin-top: 100px;
+    background: red;
+    padding: 20px 0;
+    background: #e8ffa6;
+    float: left; }
+    html .intro .intro-text {
+      float: left;
+      margin: 16px 20px 0;
+      font-size: 2em;
+      display: block; }
+    html .intro .locations {
+      color: #3d3d3d;
+      float: left;
+      background: transparent;
+      font-size: 2em;
+      height: 50px;
+      margin-top: 8px;
+      width: 300px;
+      font-family: 'Open Sans', sans-serif; }
   html .weather {
     width: 100%; }
     html .weather .interval {
       width: 100%;
       float: left;
-      display: block; }
+      display: block;
+      margin-bottom: 10px; }
       html .weather .interval .box {
         height: 100%;
         width: 100%;
         padding: 20px 0;
         text-align: center; }
         html .weather .interval .box.temp--7 {
-          background: #a378bf;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp--6 {
-          background: #a575bf;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp--5 {
-          background: #8b48a7;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp--4 {
-          background: #732fa0;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp--3 {
-          background: #772f9f;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp--2 {
-          background: #631994;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp--1 {
-          background: #510086;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp-0 {
-          background: #410b6d;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp-1 {
-          background: #3e0085;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp-2 {
-          background: #2a017b;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp-3 {
-          background: #01007f;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp-4 {
-          background: #0000ba;
-          color: #e2e2e2; }
+          background: #74cafe; }
         html .weather .interval .box.temp-5 {
-          background: #0343ad; }
+          background: #74cafe; }
         html .weather .interval .box.temp-6 {
-          background: #0046b8; }
+          background: #95f7fe; }
         html .weather .interval .box.temp-7 {
-          background: #025da3; }
+          background: #95f7fe; }
         html .weather .interval .box.temp-8 {
-          background: #01738b; }
+          background: #95f7fe; }
         html .weather .interval .box.temp-9 {
-          background: #018a76; }
+          background: #95f7fe; }
         html .weather .interval .box.temp-10 {
-          background: #01a25e; }
+          background: #95f7fe; }
         html .weather .interval .box.temp-11 {
-          background: #00d232; }
+          background: #bdffe4; }
         html .weather .interval .box.temp-12 {
-          background: #28e800; }
+          background: #bdffe4; }
         html .weather .interval .box.temp-13 {
-          background: #c3ff04; }
+          background: #bdffe4; }
         html .weather .interval .box.temp-14 {
-          background: #ebff00; }
+          background: #e0ffb0; }
         html .weather .interval .box.temp-15 {
-          background: #fff901; }
+          background: #e0ffb0; }
         html .weather .interval .box.temp-16 {
-          background: #feed09; }
+          background: #e0ffb0; }
         html .weather .interval .box.temp-17 {
-          background: #ffde00; }
+          background: #e7ffa4; }
         html .weather .interval .box.temp-18 {
-          background: #ffd600; }
+          background: #e7ffa4; }
         html .weather .interval .box.temp-19 {
-          background: #f8d308; }
+          background: #e7ffa4; }
         html .weather .interval .box.temp-20 {
-          background: #ffc500; }
+          background: #f8ff84; }
         html .weather .interval .box.temp-21 {
-          background: #ffbf01; }
+          background: #f8ff84; }
+        html .weather .interval .box.temp-22 {
+          background: #f8ff84; }
+        html .weather .interval .box.temp-23 {
+          background: #fff754; }
+        html .weather .interval .box.temp-24 {
+          background: #fff754; }
+        html .weather .interval .box.temp-25 {
+          background: #fecc00; }
+        html .weather .interval .box.temp-26 {
+          background: #fecc00; }
+        html .weather .interval .box.temp-27 {
+          background: #fecc00; }
+        html .weather .interval .box.temp-28 {
+          background: #fecc00; }
+        html .weather .interval .box.temp-29 {
+          background: #ffac00; }
+        html .weather .interval .box.temp-30 {
+          background: #ffac00; }
+        html .weather .interval .box.temp-31 {
+          background: #ffac00; }
+        html .weather .interval .box.temp-32 {
+          background: #ffac00; }
+        html .weather .interval .box.temp-33 {
+          background: #ffac00; }
+        html .weather .interval .box.temp-34 {
+          background: #ff7c00; }
+        html .weather .interval .box.temp-35 {
+          background: #ff7c00; }
+        html .weather .interval .box.temp-36 {
+          background: #ff7c00; }
+        html .weather .interval .box.temp-37 {
+          background: #ff7c00; }
+        html .weather .interval .box.temp-38 {
+          background: #ff7c00; }
+        html .weather .interval .box.temp-39 {
+          background: #ff5e00; }
+        html .weather .interval .box.temp-40 {
+          background: #ff5e00; }
+        html .weather .interval .box.temp-41 {
+          background: #ff5e00; }
+        html .weather .interval .box.temp-42 {
+          background: #ff5e00; }
+        html .weather .interval .box.temp-43 {
+          background: #ff4600; }
+        html .weather .interval .box.temp-44 {
+          background: #ff4600; }
+        html .weather .interval .box.temp-45 {
+          background: #ff4600; }
+        html .weather .interval .box.temp-46 {
+          background: #ff4600; }
+        html .weather .interval .box.temp-47 {
+          background: #ff2b00; }
+        html .weather .interval .box.temp-48 {
+          background: #ff2b00; }
+        html .weather .interval .box.temp-49 {
+          background: #ff2b00; }
+        html .weather .interval .box.temp-50 {
+          background: #ff2b00; }
         html .weather .interval .box .temperature img {
           margin-bottom: 15px; }
         html .weather .interval .box .temperature span {
           display: block;
           clear: both;
           margin-bottom: 10px; }
+
+.styled-select {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  height: 29px;
+  overflow: hidden;
+  width: 240px; }
+
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  /* If you add too much padding here, the options won't show in IE */
+  width: 268px; }
+
+.semi-square {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.blue {
+  background-color: #3b8ec2; }
+
+.blue select {
+  color: #fff; }
