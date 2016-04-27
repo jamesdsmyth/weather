@@ -5,7 +5,7 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
-    <body ng-controller="mainController">
+    <body ng-controller="mainController" class="weather-rainbow">
         <header ng-show="weather != null">
             <div class="inner">
                 <select name="mySelect"
@@ -20,18 +20,38 @@
         </header>
         <main>
             <div class="intro" ng-show="weather == null">
-                <span class="intro-text">Lets select a city</span>
-                <select name="mySelect"
+                <!-- <span class="intro-text">Lets select a city</span> -->
+                <!-- <select name="mySelect"
                         class="locations styled-select blue semi-square"
                         ng-options="location as location.city for location in locations | orderBy:'city'"
                         ng-change="setCity()"
                         ng-model="citySelect">
                         <option value="">from the list...</option>
-                </select>
+                </select> -->
+                <input type="text" class="search-city" ng-model="cityInput" ng-change="filterCity()" placeholder="city" />
+                <ul class="cities">
+                    <!-- <li class="city inactive" ng-repeat="location in locations | filter: cityInput | orderBy:'city'"> -->
+                    <li class="city"
+                        ng-class="cityInput != null ? getClass(location.city) : 'inactive'"
+                        ng-repeat="location in locations | orderBy:'city'">
+                        {{location.city}}
+                    </li>
+                </ul>
             </div>
-            {{images}}
+            <section class="present-weather" ng-show="weather != null">
+                <div class="temp-{{ weatherPresent.main.temp | celciusFilter }} box">
+                    <div class="temperature">
+                        <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ weatherPresent.weather[0].main | weatherFilter: weatherPresent.weather[0].main }}-75.png" width="75">
+                        <span>{{ weatherPresent.main.temp | celciusFilter }} &deg;c</span>
+                        <p>
+                            <span>{{ weatherPresent.dt * 1000 | date:'HH:mma' }}</span>
+                            <span>{{ weatherPresent.dt * 1000 | date:'EEEE, MMMM d' }}</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
             <ul class="weather" ng-show="weather != null">
-                <li class="interval" ng-repeat="interval in weather.list">
+                <li class="interval" ng-repeat="interval in weather">
                     <div class="temp-{{ interval.main.temp | celciusFilter }} box">
                         <div class="temperature">
                             <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ interval.weather[0].main | weatherFilter: interval.weather[0].main }}-75.png" width="75">

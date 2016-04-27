@@ -6,13 +6,22 @@ app.controller('mainController', ['$scope', 'weatherFactory', function ($scope, 
     $scope.locations = citiesJson;
     $scope.setCity = function () {
         weatherFactory.json($scope.citySelect).success(function (response) {
-            $scope.weather = response;
+            $scope.weather = response.list;
+            $scope.weatherPresent = response.list[0];
         });
-
-        // imageFactory.json($scope.citySelect).success(function (response) {
-        //     $scope.images = response;
-        // });
     }
+
+    $scope.filterCity = function () {
+        console.log($scope.cityInput);
+    }
+
+    $scope.getClass = function (city) {
+        if(city.toLowerCase().indexOf($scope.cityInput.toLowerCase()) > -1) {
+            return ''
+        } else {
+            return 'inactive'
+        }
+    }.bind(this);
 }]);
 
 // Factory returns the JSON file of the weather
@@ -26,29 +35,6 @@ app.factory('weatherFactory', ['$http', function ($http) {
     }
     return weather;
 }]);
-
-// app.factory('imageFactory', ['$http', function ($http) {
-//
-//     var images = {}
-//
-//     var key = ':Bv2UVqaS870KflhJXy5f9tdaPmqpRFByKqtAwzsaw9Q'
-//     var apiKey = btoa(key)
-//     var $searchQuery = 'xbox';
-//     var url = 'https://api.datamarket.azure.com/Bing/Search/v1/Composite?Sources=%27image%27&$top=50&$format=json&Query=%27' + $searchQuery + '%27';
-//
-//     var req = {
-//         method: 'POST',
-//         url: url,
-//         headers: {
-//             'Authorization': 'Basic ' + apiKey
-//         }
-//     }
-//     images.json = function (city) {
-//         return $http.get(req);
-//     }
-//
-//     return images;
-// }]);
 
 // Custom filter. Kelvin is returned so it needs to be converted to celcius. 'input' is angular standard.
 app.filter('celciusFilter', function () {
@@ -85,5 +71,5 @@ app.filter('weatherFilter', function () {
 
 // To do
 
-// - google image search the city and get an image loaded in as the background. This will be done gradually and gracefully so it isnt a sudden push.
-// - if not, google map the image inthe background
+// on clicking enter will submit the search
+// style the home cities page - maybe we hide all of them and make them appear at the bottom if they match. Could do something really cool with this.

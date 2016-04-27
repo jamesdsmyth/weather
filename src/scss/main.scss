@@ -49,345 +49,372 @@ table {
 
 /* Weather */
 
+* {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 html {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
 	color: #3d3d3d;
 
-	header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 65%;
-		background: rgba(255, 255, 255, 0.5);
+	.weather-rainbow {
 
-		.locations {
-			float: left;
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 65%;
+			background: rgba(255, 255, 255, 0.5);
+
+			.locations {
+				float: left;
+			}
+
+			h1 {
+				float: left;
+		    }
 		}
 
-		h1 {
+		.inner {
+			padding: 20px;
+		}
+
+		.intro {
+			width: 100%;
+		    padding: 20px 0;
 			float: left;
-	        // font-size: 2em;
-	        // padding: 1em 0;
-	        // text-align: center;
+
+			// .intro-text {
+			// 	float: left;
+			// 	margin: 16px 20px 0;
+			// 	display: block;
+			// }
+			//
+			// .locations {
+			// 	color: #3d3d3d;
+			// 	float: left;
+			// 	background: transparent;
+			//     margin-top: 10px;
+			// 	width: 250px;
+			// 	font-size: 1em;
+			// 	font-family: 'Open Sans', sans-serif;
+			// }
+
+			.cities {
+				width: 100%;
+
+				.city {
+					float: left;
+					margin-bottom: 10px;
+					width: 10%;
+					display: block;
+
+					&.inactive {
+						display: none;
+					}
+				}
+			}
+		}
+
+	    .weather {
+	        width: 35%;
+			float: right;
+
+	        .interval {
+	            width: 100%;
+	            float: left;
+	            display: block;
+				margin-bottom: 10px;
+	        }
 	    }
-	}
 
-	.inner {
-		padding: 20px;
-	}
-
-	.intro {
-		width: 100%;
-		margin-top: 100px;
-		background: red;
-	    padding: 20px 0;
-		background: #e8ffa6;
-		float: left;
-
-		.intro-text {
+		.present-weather {
 			float: left;
-			margin: 16px 20px 0;
-			display: block;
+			width: 65%;
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			left: 0;
 		}
 
-		.locations {
-			color: #3d3d3d;
-			float: left;
-			background: transparent;
-		    margin-top: 10px;
-			width: 250px;
-			font-size: 1em;
-			font-family: 'Open Sans', sans-serif;
+		.box {
+			height: 100%;
+			width: 100%;
+			padding: 20px 0;
+			text-align: center;
+
+			&.temp--7 {
+				background: #74cafe;
+			}
+
+			&.temp--6 {
+				background: #74cafe;
+			}
+
+			&.temp--5 {
+				background: #74cafe;
+			}
+
+			&.temp--4 {
+				background: #74cafe;
+			}
+
+			&.temp--3 {
+				background: #74cafe;
+			}
+
+			&.temp--2 {
+				background: #74cafe;
+			}
+
+			&.temp--1 {
+				background: #74cafe;
+			}
+
+			&.temp-0 {
+				background: #74cafe;
+			}
+
+			&.temp-1 {
+				background: #74cafe;
+			}
+
+			&.temp-2 {
+				background: #74cafe;
+			}
+
+			&.temp-3 {
+				background: #74cafe;
+			}
+
+			&.temp-4 {
+				background: #74cafe;
+			}
+
+			&.temp-5 {
+				background: #74cafe;
+			}
+
+			&.temp-6 {
+				background: #95f7fe;
+			}
+
+			&.temp-7 {
+				background: #95f7fe;
+			}
+
+			&.temp-8 {
+				background: #95f7fe;
+			}
+
+			&.temp-9 {
+				background: #95f7fe;
+			}
+
+			&.temp-10 {
+				background: #95f7fe;
+			}
+
+			&.temp-11 {
+				background: #bdffe4;
+			}
+
+			&.temp-12 {
+				background: #bdffe4;
+			}
+
+			&.temp-13 {
+				background: #bdffe4;
+			}
+
+			&.temp-14 {
+				background: #e0ffb0;
+			}
+
+			&.temp-15 {
+				background: #e0ffb0;
+			}
+
+			&.temp-16 {
+				background: #e0ffb0;
+			}
+
+			&.temp-17 {
+				background: #e7ffa4;
+			}
+
+			&.temp-18 {
+				background: #e7ffa4;
+			}
+
+			&.temp-19 {
+				background: #e7ffa4;
+			}
+
+			&.temp-20 {
+				background: #f8ff84;
+			}
+
+			&.temp-21 {
+				background: #f8ff84;
+			}
+
+			&.temp-22 {
+				background: #f8ff84;
+			}
+
+			&.temp-23 {
+				background: #fff754;
+			}
+
+			&.temp-24 {
+				background: #fff754;
+			}
+
+			&.temp-25 {
+				background: #fecc00;
+			}
+
+			&.temp-26 {
+				background: #fecc00;
+			}
+
+			&.temp-27 {
+				background: #fecc00;
+			}
+
+			&.temp-28 {
+				background: #fecc00;
+			}
+
+			&.temp-29 {
+				background: #ffac00;
+			}
+
+			&.temp-30 {
+				background: #ffac00;
+			}
+
+			&.temp-31 {
+				background: #ffac00;
+			}
+
+			&.temp-32 {
+				background: #ffac00;
+			}
+
+			&.temp-33 {
+				background: #ffac00;
+			}
+
+			&.temp-34 {
+				background: #ff7c00;
+			}
+
+			&.temp-35 {
+				background: #ff7c00;
+			}
+
+			&.temp-36 {
+				background: #ff7c00;
+			}
+
+			&.temp-37 {
+				background: #ff7c00;
+			}
+
+			&.temp-38 {
+				background: #ff7c00;
+			}
+
+			&.temp-39 {
+				background: #ff5e00;
+			}
+
+			&.temp-40 {
+				background: #ff5e00;
+			}
+
+			&.temp-41 {
+				background: #ff5e00;
+			}
+
+			&.temp-42 {
+				background: #ff5e00;
+			}
+
+			&.temp-43 {
+				background: #ff4600;
+			}
+
+			&.temp-44 {
+				background: #ff4600;
+			}
+
+			&.temp-45 {
+				background: #ff4600;
+			}
+
+			&.temp-46 {
+				background: #ff4600;
+			}
+
+			&.temp-47 {
+				background: #ff2b00;
+			}
+
+			&.temp-48 {
+				background: #ff2b00;
+			}
+
+			&.temp-49 {
+				background: #ff2b00;
+			}
+
+			&.temp-50 {
+				background: #ff2b00;
+			}
+
+			.temperature {
+
+				img {
+					margin-bottom: 15px;
+				}
+
+				span {
+					display: block;
+					clear: both;
+					margin-bottom: 10px;
+				}
+			}
 		}
 	}
-
-    .weather {
-        width: 35%;
-		float: right;
-
-        .interval {
-            width: 100%;
-            float: left;
-            display: block;
-			margin-bottom: 10px;
-
-            .box {
-                height: 100%;
-                width: 100%;
-                padding: 20px 0;
-                text-align: center;
-
-				&.temp--7 {
-                    background: #74cafe;
-                }
-
-				&.temp--6 {
-                    background: #74cafe;
-                }
-
-				&.temp--5 {
-                    background: #74cafe;
-                }
-
-				&.temp--4 {
-                    background: #74cafe;
-                }
-
-				&.temp--3 {
-                    background: #74cafe;
-                }
-
-				&.temp--2 {
-                    background: #74cafe;
-                }
-
-				&.temp--1 {
-                    background: #74cafe;
-                }
-
-				&.temp-0 {
-                    background: #74cafe;
-                }
-
-				&.temp-1 {
-                    background: #74cafe;
-                }
-
-				&.temp-2 {
-                    background: #74cafe;
-                }
-
-				&.temp-3 {
-                    background: #74cafe;
-                }
-
-                &.temp-4 {
-                    background: #74cafe;
-                }
-
-                &.temp-5 {
-                    background: #74cafe;
-                }
-
-                &.temp-6 {
-                    background: #95f7fe;
-                }
-
-                &.temp-7 {
-                    background: #95f7fe;
-                }
-
-                &.temp-8 {
-                    background: #95f7fe;
-                }
-
-                &.temp-9 {
-                    background: #95f7fe;
-                }
-
-                &.temp-10 {
-                    background: #95f7fe;
-                }
-
-                &.temp-11 {
-                    background: #bdffe4;
-                }
-
-                &.temp-12 {
-                    background: #bdffe4;
-                }
-
-                &.temp-13 {
-                    background: #bdffe4;
-                }
-
-                &.temp-14 {
-                    background: #e0ffb0;
-                }
-
-                &.temp-15 {
-                    background: #e0ffb0;
-                }
-
-                &.temp-16 {
-                    background: #e0ffb0;
-                }
-
-                &.temp-17 {
-                    background: #e7ffa4;
-                }
-
-                &.temp-18 {
-                    background: #e7ffa4;
-                }
-
-                &.temp-19 {
-                    background: #e7ffa4;
-                }
-
-                &.temp-20 {
-                    background: #f8ff84;
-                }
-
-                &.temp-21 {
-                    background: #f8ff84;
-                }
-
-				&.temp-22 {
-                    background: #f8ff84;
-                }
-
-				&.temp-23 {
-                    background: #fff754;
-                }
-
-				&.temp-24 {
-                    background: #fff754;
-                }
-
-				&.temp-25 {
-                    background: #fecc00;
-                }
-
-				&.temp-26 {
-                    background: #fecc00;
-                }
-
-				&.temp-27 {
-                    background: #fecc00;
-                }
-
-				&.temp-28 {
-                    background: #fecc00;
-                }
-
-				&.temp-29 {
-                    background: #ffac00;
-                }
-
-				&.temp-30 {
-                    background: #ffac00;
-                }
-
-				&.temp-31 {
-                    background: #ffac00;
-                }
-
-				&.temp-32 {
-                    background: #ffac00;
-                }
-
-				&.temp-33 {
-                    background: #ffac00;
-                }
-
-				&.temp-34 {
-                    background: #ff7c00;
-                }
-
-				&.temp-35 {
-                    background: #ff7c00;
-                }
-
-				&.temp-36 {
-                    background: #ff7c00;
-                }
-
-				&.temp-37 {
-                    background: #ff7c00;
-                }
-
-				&.temp-38 {
-                    background: #ff7c00;
-                }
-
-				&.temp-39 {
-                    background: #ff5e00;
-                }
-
-				&.temp-40 {
-                    background: #ff5e00;
-                }
-
-				&.temp-41 {
-                    background: #ff5e00;
-                }
-
-				&.temp-42 {
-                    background: #ff5e00;
-                }
-
-				&.temp-43 {
-                    background: #ff4600;
-                }
-
-				&.temp-44 {
-                    background: #ff4600;
-                }
-
-				&.temp-45 {
-                    background: #ff4600;
-                }
-
-				&.temp-46 {
-                    background: #ff4600;
-                }
-
-				&.temp-47 {
-                    background: #ff2b00;
-                }
-
-				&.temp-48 {
-                    background: #ff2b00;
-                }
-
-				&.temp-49 {
-                    background: #ff2b00;
-                }
-
-				&.temp-50 {
-                    background: #ff2b00;
-                }
-
-                .temperature {
-
-                    img {
-                        margin-bottom: 15px;
-                    }
-
-                    span {
-                        display: block;
-                        clear: both;
-                        margin-bottom: 10px;
-                    }
-                }
-            }
-        }
-    }
 }
 
-.styled-select {
-   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
-   height: 29px;
-   overflow: hidden;
-   width: 240px;
-}
-
-.styled-select select {
-   background: transparent;
-   border: none;
-   font-size: 14px;
-   height: 29px;
-   padding: 5px; /* If you add too much padding here, the options won't show in IE */
-   width: 268px;
-}
-
-.semi-square {
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-}
-
-.blue    { background-color: #3b8ec2; }
-.blue select    { color: #fff; }
+// .styled-select {
+//    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+//    height: 29px;
+//    overflow: hidden;
+//    width: 240px;
+// }
+//
+// .styled-select select {
+//    background: transparent;
+//    border: none;
+//    font-size: 14px;
+//    height: 29px;
+//    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+//    width: 268px;
+// }
+//
+// .semi-square {
+//    -webkit-border-radius: 5px;
+//    -moz-border-radius: 5px;
+//    border-radius: 5px;
+// }
+//
+// .blue    { background-color: #3b8ec2; }
+// .blue select    { color: #fff; }
