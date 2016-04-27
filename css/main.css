@@ -54,13 +54,14 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 20px;
+    width: 65%;
     background: rgba(255, 255, 255, 0.5); }
     html header .locations {
       float: left; }
     html header h1 {
       float: left; }
+  html .inner {
+    padding: 20px; }
   html .intro {
     width: 100%;
     margin-top: 100px;
@@ -71,19 +72,18 @@ html {
     html .intro .intro-text {
       float: left;
       margin: 16px 20px 0;
-      font-size: 2em;
       display: block; }
     html .intro .locations {
       color: #3d3d3d;
       float: left;
       background: transparent;
-      font-size: 2em;
-      height: 50px;
-      margin-top: 8px;
-      width: 300px;
+      margin-top: 10px;
+      width: 250px;
+      font-size: 1em;
       font-family: 'Open Sans', sans-serif; }
   html .weather {
-    width: 100%; }
+    width: 35%;
+    float: right; }
     html .weather .interval {
       width: 100%;
       float: left;

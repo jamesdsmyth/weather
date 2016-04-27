@@ -7,14 +7,16 @@
     </head>
     <body ng-controller="mainController">
         <header ng-show="weather != null">
-            <select name="mySelect"
-                    class="locations"
-                    ng-options="location as location.city for location in locations | orderBy:'city'"
-                    ng-change="setCity()"
-                    ng-model="citySelect">
-                    <option value="">Select a city</option>
-            </select>
-            <h1>The weather in {{ weather.city.name }} is...</h1>
+            <div class="inner">
+                <select name="mySelect"
+                        class="locations"
+                        ng-options="location as location.city for location in locations | orderBy:'city'"
+                        ng-change="setCity()"
+                        ng-model="citySelect">
+                        <option value="">Select a city</option>
+                </select>
+                <h1>The weather in {{ weather.city.name }} is...</h1>
+            </div>
         </header>
         <main>
             <div class="intro" ng-show="weather == null">
@@ -27,6 +29,7 @@
                         <option value="">from the list...</option>
                 </select>
             </div>
+            {{images}}
             <ul class="weather" ng-show="weather != null">
                 <li class="interval" ng-repeat="interval in weather.list">
                     <div class="temp-{{ interval.main.temp | celciusFilter }} box">

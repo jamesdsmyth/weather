@@ -7,6 +7,6 @@ Weather rainbow is a simple application using AngularJS that visually shows you 
 
 1. `git clone` repo
 2. `npm install` to get the node_modules
-3. open up the `index.html` in a browser
+3. Once you are within the root folder `http-server ./` will open up [localhost:8080/](http://localhost:8080/)
 
 The app gets its live data from the [open weather map](http://openweathermap.org/api).
