@@ -89,8 +89,7 @@ html {
       background: url("../src/images/rainbow-4.jpg") no-repeat center center fixed; }
     html .weather-rainbow .intro .search-area {
       width: 370px;
-      margin: 0 auto;
-      margin-top: 40px; }
+      margin: 40px auto; }
       html .weather-rainbow .intro .search-area .search-city {
         width: 300px;
         height: 60px;
@@ -110,8 +109,9 @@ html {
       html .weather-rainbow .intro .cities .city {
         float: left;
         margin-bottom: 10px;
-        width: 10%;
-        display: block; }
+        width: 20%;
+        display: block;
+        cursor: pointer; }
         html .weather-rainbow .intro .cities .city.inactive {
           display: none; }
   html .weather-rainbow .weather {
