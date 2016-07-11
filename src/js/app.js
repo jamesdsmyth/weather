@@ -6,7 +6,7 @@ app.controller('mainController', ['$scope', 'weatherFactory', function ($scope, 
     $scope.setCity = function () {
         weatherFactory.json($scope.cityInput).success(function (response) {
             $scope.weather = response.list;
-            console.log(response);
+            $scope.cityName = response.city.name;
             $scope.weatherPresent = response.list[0];
         });
     }
@@ -29,8 +29,10 @@ app.factory('weatherFactory', ['$http', function ($http) {
     var weather = {};
     weather.urlStart = 'http://api.openweathermap.org/data/2.5/forecast?q=';
     weather.urlEnd =  ',&mode=json&appid=fb161b8bdfd1a946ed269b0b2cf42b77';
+
     weather.json = function (city) {
-        return $http.get(weather.urlStart + city.city + weather.urlEnd);
+        console.log(weather.urlStart + city + weather.urlEnd);
+        return $http.get(weather.urlStart + city + weather.urlEnd);
     }
     return weather;
 }]);
@@ -43,13 +45,12 @@ app.filter('celciusFilter', function () {
     }
 });
 
-// Custom filter. Gets the correct title for the image and is passed back.
+// gets the correct title for the image and is passed back.
 app.filter('weatherFilter', function () {
 
     return function (input) {
         var weather = null;
 
-        console.log(input);
         switch (input) {
             case 'Clear':
                 weather = 'sun';
@@ -68,11 +69,29 @@ app.filter('weatherFilter', function () {
     }
 });
 
+// passes the type of weather and makes it friendly
+app.filter('weatherTypeFilter', function () {
+
+    return function (input) {
+
+        var weatherType = null;
+
+        switch (input) {
+            case 'Clear':
+                weatherType = 'sunny';
+                break;
+            case 'Clouds':
+                weatherType = 'cloudy';
+                break;
+            case 'Rain':
+                weatherType = 'raining';
+                break;
+            case 'Snow':
+                weatherType = 'snowing';
+                break;
+        }
+        return input = weatherType;
+    }
+})
+
 $('.weather-rainbow').removeClass('loading');
-
-console.log(Math.floor(Math.random() * 4) + 1);
-
-// To do
-
-// on clicking enter will submit the search
-// style the home cities page - maybe we hide all of them and make them appear at the bottom if they match. Could do something really cool with this.

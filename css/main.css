@@ -65,6 +65,9 @@ html {
       float: left; }
     html .weather-rainbow header h1 {
       float: left; }
+  html .weather-rainbow main {
+    float: left;
+    width: 100%; }
   html .weather-rainbow .inner {
     padding: 20px; }
     html .weather-rainbow .inner.opacity-7 {
@@ -103,7 +106,8 @@ html {
         height: 55px;
         font-size: 2em;
         margin-left: 10px;
-        background: none; }
+        background: none;
+        cursor: pointer; }
     html .weather-rainbow .intro .cities {
       width: 100%; }
       html .weather-rainbow .intro .cities .city {
@@ -131,128 +135,147 @@ html {
     left: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border-right: 10px solid #ffffff; }
+    border-right: 10px solid #ffffff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    html .weather-rainbow .present-weather.Clear {
+      background: url("../src/images/rainbow-Clear.jpg") no-repeat center center fixed; }
+    html .weather-rainbow .present-weather.Clouds {
+      background: url("../src/images/rainbow-Clouds.jpg") no-repeat center center fixed; }
+    html .weather-rainbow .present-weather.Rain {
+      background: url("../src/images/rainbow-Rain.jpg") no-repeat center center fixed; }
+    html .weather-rainbow .present-weather.Snow {
+      background: url("../src/images/rainbow-Snow.jpg") no-repeat center center fixed; }
+    html .weather-rainbow .present-weather .temperature {
+      height: 150px;
+      width: 100%;
+      position: absolute;
+      top: calc(50vh - 75px); }
+      html .weather-rainbow .present-weather .temperature p {
+        font-size: 1.5em; }
   html .weather-rainbow .box {
     height: 100%;
     width: 100%;
     padding: 20px 0;
     text-align: center; }
     html .weather-rainbow .box.temp--7 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp--6 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp--5 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp--4 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp--3 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp--2 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp--1 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp-0 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp-1 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp-2 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp-3 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp-4 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp-5 {
-      background: #74cafe; }
+      background: rgba(116, 202, 254, 0.5); }
     html .weather-rainbow .box.temp-6 {
-      background: #95f7fe; }
+      background: rgba(149, 247, 254, 0.5); }
     html .weather-rainbow .box.temp-7 {
-      background: #95f7fe; }
+      background: rgba(149, 247, 254, 0.5); }
     html .weather-rainbow .box.temp-8 {
-      background: #95f7fe; }
+      background: rgba(149, 247, 254, 0.5); }
     html .weather-rainbow .box.temp-9 {
-      background: #95f7fe; }
+      background: rgba(149, 247, 254, 0.5); }
     html .weather-rainbow .box.temp-10 {
-      background: #95f7fe; }
+      background: rgba(149, 247, 254, 0.5); }
     html .weather-rainbow .box.temp-11 {
-      background: #bdffe4; }
+      background: rgba(189, 255, 228, 0.5); }
     html .weather-rainbow .box.temp-12 {
-      background: #bdffe4; }
+      background: rgba(189, 255, 228, 0.5); }
     html .weather-rainbow .box.temp-13 {
-      background: #bdffe4; }
+      background: rgba(189, 255, 228, 0.5); }
     html .weather-rainbow .box.temp-14 {
-      background: #e0ffb0; }
+      background: rgba(224, 255, 176, 0.5); }
     html .weather-rainbow .box.temp-15 {
-      background: #e0ffb0; }
+      background: rgba(224, 255, 176, 0.5); }
     html .weather-rainbow .box.temp-16 {
-      background: #e0ffb0; }
+      background: rgba(224, 255, 176, 0.5); }
     html .weather-rainbow .box.temp-17 {
-      background: #e7ffa4; }
+      background: rgba(231, 255, 164, 0.5); }
     html .weather-rainbow .box.temp-18 {
-      background: #e7ffa4; }
+      background: rgba(231, 255, 164, 0.5); }
     html .weather-rainbow .box.temp-19 {
-      background: #e7ffa4; }
+      background: rgba(231, 255, 164, 0.5); }
     html .weather-rainbow .box.temp-20 {
-      background: #f8ff84; }
+      background: rgba(248, 255, 132, 0.5); }
     html .weather-rainbow .box.temp-21 {
-      background: #f8ff84; }
+      background: rgba(248, 255, 132, 0.5); }
     html .weather-rainbow .box.temp-22 {
-      background: #f8ff84; }
+      background: rgba(248, 255, 132, 0.5); }
     html .weather-rainbow .box.temp-23 {
-      background: #fff754; }
+      background: rgba(255, 247, 84, 0.5); }
     html .weather-rainbow .box.temp-24 {
-      background: #fff754; }
+      background: rgba(255, 247, 84, 0.5); }
     html .weather-rainbow .box.temp-25 {
-      background: #fecc00; }
+      background: rgba(254, 204, 0, 0.5); }
     html .weather-rainbow .box.temp-26 {
-      background: #fecc00; }
+      background: rgba(254, 204, 0, 0.5); }
     html .weather-rainbow .box.temp-27 {
-      background: #fecc00; }
+      background: rgba(254, 204, 0, 0.5); }
     html .weather-rainbow .box.temp-28 {
-      background: #fecc00; }
+      background: rgba(254, 204, 0, 0.5); }
     html .weather-rainbow .box.temp-29 {
-      background: #ffac00; }
+      background: rgba(255, 172, 0, 0.5); }
     html .weather-rainbow .box.temp-30 {
-      background: #ffac00; }
+      background: rgba(255, 172, 0, 0.5); }
     html .weather-rainbow .box.temp-31 {
-      background: #ffac00; }
+      background: rgba(255, 172, 0, 0.5); }
     html .weather-rainbow .box.temp-32 {
-      background: #ffac00; }
+      background: rgba(255, 172, 0, 0.5); }
     html .weather-rainbow .box.temp-33 {
-      background: #ffac00; }
+      background: rgba(255, 172, 0, 0.5); }
     html .weather-rainbow .box.temp-34 {
-      background: #ff7c00; }
+      background: rgba(255, 124, 0, 0.5); }
     html .weather-rainbow .box.temp-35 {
-      background: #ff7c00; }
+      background: rgba(255, 124, 0, 0.5); }
     html .weather-rainbow .box.temp-36 {
-      background: #ff7c00; }
+      background: rgba(255, 124, 0, 0.5); }
     html .weather-rainbow .box.temp-37 {
-      background: #ff7c00; }
+      background: rgba(255, 124, 0, 0.5); }
     html .weather-rainbow .box.temp-38 {
-      background: #ff7c00; }
+      background: rgba(255, 124, 0, 0.5); }
     html .weather-rainbow .box.temp-39 {
-      background: #ff5e00; }
+      background: rgba(255, 94, 0, 0.5); }
     html .weather-rainbow .box.temp-40 {
-      background: #ff5e00; }
+      background: rgba(255, 94, 0, 0.5); }
     html .weather-rainbow .box.temp-41 {
-      background: #ff5e00; }
+      background: rgba(255, 94, 0, 0.5); }
     html .weather-rainbow .box.temp-42 {
-      background: #ff5e00; }
+      background: rgba(255, 94, 0, 0.5); }
     html .weather-rainbow .box.temp-43 {
-      background: #ff4600; }
+      background: rgba(255, 70, 0, 0.5); }
     html .weather-rainbow .box.temp-44 {
-      background: #ff4600; }
+      background: rgba(255, 70, 0, 0.5); }
     html .weather-rainbow .box.temp-45 {
-      background: #ff4600; }
+      background: rgba(255, 70, 0, 0.5); }
     html .weather-rainbow .box.temp-46 {
-      background: #ff4600; }
+      background: rgba(255, 70, 0, 0.5); }
     html .weather-rainbow .box.temp-47 {
-      background: #ff2b00; }
+      background: rgba(255, 43, 0, 0.5); }
     html .weather-rainbow .box.temp-48 {
-      background: #ff2b00; }
+      background: rgba(255, 43, 0, 0.5); }
     html .weather-rainbow .box.temp-49 {
-      background: #ff2b00; }
+      background: rgba(255, 43, 0, 0.5); }
     html .weather-rainbow .box.temp-50 {
-      background: #ff2b00; }
+      background: rgba(255, 43, 0, 0.5); }
     html .weather-rainbow .box .temperature img {
       margin-bottom: 15px; }
     html .weather-rainbow .box .temperature span {

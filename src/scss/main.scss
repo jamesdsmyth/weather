@@ -78,6 +78,11 @@ html {
 		    }
 		}
 
+		main {
+			float: left;
+			width: 100%;
+		}
+
 		.inner {
 			padding: 20px;
 
@@ -113,22 +118,6 @@ html {
 				background: url('../src/images/rainbow-4.jpg') no-repeat center center fixed;
 			}
 
-			// .intro-text {
-			// 	float: left;
-			// 	margin: 16px 20px 0;
-			// 	display: block;
-			// }
-			//
-			// .locations {
-			// 	color: #3d3d3d;
-			// 	float: left;
-			// 	background: transparent;
-			//     margin-top: 10px;
-			// 	width: 250px;
-			// 	font-size: 1em;
-			// 	font-family: 'Open Sans', sans-serif;
-			// }
-
 			.search-area {
 				width: 370px;
     			margin: 40px auto;
@@ -149,6 +138,7 @@ html {
 				    font-size: 2em;
 				    margin-left: 10px;
 					background: none;
+					cursor: pointer;
 				}
 			}
 
@@ -191,6 +181,37 @@ html {
 			-moz-box-sizing: border-box;
   			box-sizing: border-box;
 			border-right: 10px solid #ffffff;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+
+			&.Clear {
+				background: url('../src/images/rainbow-Clear.jpg') no-repeat center center fixed;
+			}
+
+			&.Clouds {
+				background: url('../src/images/rainbow-Clouds.jpg') no-repeat center center fixed;
+			}
+
+			&.Rain {
+				background: url('../src/images/rainbow-Rain.jpg') no-repeat center center fixed;
+			}
+
+			&.Snow {
+				background: url('../src/images/rainbow-Snow.jpg') no-repeat center center fixed;
+			}
+
+			.temperature {
+				height: 150px;
+				width: 100%;
+			    position: absolute;
+			    top: calc(50vh - 75px);
+
+				p {
+					font-size: 1.5em;
+				}
+			}
 		}
 
 		.box {
@@ -200,235 +221,235 @@ html {
 			text-align: center;
 
 			&.temp--7 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp--6 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp--5 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp--4 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp--3 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp--2 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp--1 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp-0 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp-1 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp-2 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp-3 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp-4 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp-5 {
-				background: #74cafe;
+				background: rgba(116, 202, 254, 0.5);
 			}
 
 			&.temp-6 {
-				background: #95f7fe;
+				background: rgba(149, 247, 254, 0.5);
 			}
 
 			&.temp-7 {
-				background: #95f7fe;
+				background: rgba(149, 247, 254, 0.5);
 			}
 
 			&.temp-8 {
-				background: #95f7fe;
+				background: rgba(149, 247, 254, 0.5);
 			}
 
 			&.temp-9 {
-				background: #95f7fe;
+				background: rgba(149, 247, 254, 0.5);
 			}
 
 			&.temp-10 {
-				background: #95f7fe;
+				background: rgba(149, 247, 254, 0.5);
 			}
 
 			&.temp-11 {
-				background: #bdffe4;
+				background: rgba(189, 255, 228, 0.5);
 			}
 
 			&.temp-12 {
-				background: #bdffe4;
+				background: rgba(189, 255, 228, 0.5);
 			}
 
 			&.temp-13 {
-				background: #bdffe4;
+				background: rgba(189, 255, 228, 0.5);
 			}
 
 			&.temp-14 {
-				background: #e0ffb0;
+				background: rgba(224, 255, 176, 0.5);
 			}
 
 			&.temp-15 {
-				background: #e0ffb0;
+				background: rgba(224, 255, 176, 0.5);
 			}
 
 			&.temp-16 {
-				background: #e0ffb0;
+				background: rgba(224, 255, 176, 0.5);
 			}
 
 			&.temp-17 {
-				background: #e7ffa4;
+				background: rgba(231, 255, 164, 0.5);
 			}
 
 			&.temp-18 {
-				background: #e7ffa4;
+				background: rgba(231, 255, 164, 0.5);
 			}
 
 			&.temp-19 {
-				background: #e7ffa4;
+				background: rgba(231, 255, 164, 0.5);
 			}
 
 			&.temp-20 {
-				background: #f8ff84;
+				background: rgba(248, 255, 132, 0.5);
 			}
 
 			&.temp-21 {
-				background: #f8ff84;
+				background: rgba(248, 255, 132, 0.5);
 			}
 
 			&.temp-22 {
-				background: #f8ff84;
+				background: rgba(248, 255, 132, 0.5);
 			}
 
 			&.temp-23 {
-				background: #fff754;
+				background: rgba(255, 247, 84, 0.5);
 			}
 
 			&.temp-24 {
-				background: #fff754;
+				background: rgba(255, 247, 84, 0.5);
 			}
 
 			&.temp-25 {
-				background: #fecc00;
+				background: rgba(254, 204, 0, 0.5);
 			}
 
 			&.temp-26 {
-				background: #fecc00;
+				background: rgba(254, 204, 0, 0.5);
 			}
 
 			&.temp-27 {
-				background: #fecc00;
+				background: rgba(254, 204, 0, 0.5);
 			}
 
 			&.temp-28 {
-				background: #fecc00;
+				background: rgba(254, 204, 0, 0.5);
 			}
 
 			&.temp-29 {
-				background: #ffac00;
+				background: rgba(255, 172, 0, 0.5);
 			}
 
 			&.temp-30 {
-				background: #ffac00;
+				background: rgba(255, 172, 0, 0.5);
 			}
 
 			&.temp-31 {
-				background: #ffac00;
+				background: rgba(255, 172, 0, 0.5);
 			}
 
 			&.temp-32 {
-				background: #ffac00;
+				background: rgba(255, 172, 0, 0.5);
 			}
 
 			&.temp-33 {
-				background: #ffac00;
+				background: rgba(255, 172, 0, 0.5);
 			}
 
 			&.temp-34 {
-				background: #ff7c00;
+				background: rgba(255, 124, 0, 0.5);
 			}
 
 			&.temp-35 {
-				background: #ff7c00;
+				background: rgba(255, 124, 0, 0.5);
 			}
 
 			&.temp-36 {
-				background: #ff7c00;
+				background: rgba(255, 124, 0, 0.5);
 			}
 
 			&.temp-37 {
-				background: #ff7c00;
+				background: rgba(255, 124, 0, 0.5);
 			}
 
 			&.temp-38 {
-				background: #ff7c00;
+				background: rgba(255, 124, 0, 0.5);
 			}
 
 			&.temp-39 {
-				background: #ff5e00;
+				background: rgba(255, 94, 0, 0.5);
 			}
 
 			&.temp-40 {
-				background: #ff5e00;
+				background: rgba(255, 94, 0, 0.5);
 			}
 
 			&.temp-41 {
-				background: #ff5e00;
+				background: rgba(255, 94, 0, 0.5);
 			}
 
 			&.temp-42 {
-				background: #ff5e00;
+				background: rgba(255, 94, 0, 0.5);
 			}
 
 			&.temp-43 {
-				background: #ff4600;
+				background: rgba(255, 70, 0, 0.5);
 			}
 
 			&.temp-44 {
-				background: #ff4600;
+				background: rgba(255, 70, 0, 0.5);
 			}
 
 			&.temp-45 {
-				background: #ff4600;
+				background: rgba(255, 70, 0, 0.5);
 			}
 
 			&.temp-46 {
-				background: #ff4600;
+				background: rgba(255, 70, 0, 0.5);
 			}
 
 			&.temp-47 {
-				background: #ff2b00;
+				background: rgba(255, 43, 0, 0.5);
 			}
 
 			&.temp-48 {
-				background: #ff2b00;
+				background: rgba(255, 43, 0, 0.5);
 			}
 
 			&.temp-49 {
-				background: #ff2b00;
+				background: rgba(255, 43, 0, 0.5);
 			}
 
 			&.temp-50 {
-				background: #ff2b00;
+				background: rgba(255, 43, 0, 0.5);
 			}
 
 			.temperature {
