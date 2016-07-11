@@ -101,6 +101,18 @@ html {
         background: transparent;
         font-size: 2em;
         padding: 10px; }
+      html .weather-rainbow .intro .search-area ::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: #7e7e7e; }
+      html .weather-rainbow .intro .search-area ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #7e7e7e; }
+      html .weather-rainbow .intro .search-area :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #7e7e7e; }
+      html .weather-rainbow .intro .search-area :-moz-placeholder {
+        /* Firefox 18- */
+        color: #7e7e7e; }
       html .weather-rainbow .intro .search-area .search-city-click {
         border: none;
         height: 55px;
@@ -126,6 +138,8 @@ html {
       float: left;
       display: block;
       margin-bottom: 10px; }
+      html .weather-rainbow .weather .interval:last-child {
+        margin-bottom: 0; }
   html .weather-rainbow .present-weather {
     float: left;
     width: 65%;
@@ -155,6 +169,12 @@ html {
       top: calc(50vh - 75px); }
       html .weather-rainbow .present-weather .temperature p {
         font-size: 1.5em; }
+    html .weather-rainbow .present-weather .return-arrow {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      display: block;
+      cursor: pointer; }
   html .weather-rainbow .box {
     height: 100%;
     width: 100%;

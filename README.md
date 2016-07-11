@@ -11,4 +11,8 @@ Weather rainbow is a simple application using AngularJS that visually shows you 
 2. `npm install` to get the node_modules
 3.  `cd` to the folder and then `http-server ./` will open up [localhost:8080/](http://localhost:8080/)
 
-The app gets its live data from the [open weather map](http://openweathermap.org/api).
+Weather rainbow gets its live data from the [open weather map](http://openweathermap.org/api).
+
+### Bugs
+
+A few locations retrieve the wrong location data. An example is if you select 'New Dehli', you get 'Connaught Place'. I am slowly working through these and matching them up correctly...

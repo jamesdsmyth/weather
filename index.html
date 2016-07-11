@@ -7,16 +7,29 @@
     </head>
     <body ng-controller="mainController" class="weather-rainbow loading">
         <main>
-            <div class="intro {{randomNumber}}" ng-if="weather == null">
+            <div class="intro {{randomNumber}}"
+                ng-if="weather == null">
                 <div class="inner opacity-7">
-                    <form class="search-area">
-                        <input type="text" id="search-city" class="search-city" ng-model="cityInput" placeholder="Type your city" autofocus />
-                        <button type="submit" for="search-city" class="search-city-click" ng-click="setCity()">Go</button>
+                    <form class="search-area"
+                        ng-submit="setCity()">
+                        <input type="text"
+                            id="search-city"
+                            class="search-city"
+                            ng-model="city.input"
+                            placeholder="Enter your city"
+                            tabindex="1"
+                            autofocus />
+                        <button type="submit"
+                            for="search-city"
+                            class="search-city-click"
+                            tabindex="2">
+                            Go
+                        </button>
                     </form>
                     <ul class="cities">
                         <li class="city"
-                            ng-class="location.city.toLowerCase().indexOf(cityInput.toLowerCase()) > -1 ? null : 'inactive'"
                             ng-repeat="location in locations | orderBy:'city'"
+                            ng-class="location.city.toLowerCase().indexOf(city.input.toLowerCase()) > -1 ? null : 'inactive'"
                             ng-click="cityClick(location.city)">
                             {{location.city}}
                         </li>
@@ -24,6 +37,7 @@
                 </div>
             </div>
             <section class="present-weather {{weatherPresent.weather[0].main}}" ng-if="weather != null">
+                <img src="https://maxcdn.icons8.com/windows10/PNG/96/Arrows/arrows_long_left-96.png" ng-click="returnClick()" class="return-arrow" title="Long Arrow Left" width="96">
                 <div class="temp-{{ weatherPresent.main.temp | celciusFilter }} box">
                     <div class="temperature">
                         <img src="https://maxcdn.icons8.com/iOS7/PNG/100/Weather/{{ weatherPresent.weather[0].main | weatherFilter: weatherPresent.weather[0].main }}-100.png" width="100">
@@ -35,11 +49,14 @@
                 <li class="interval" ng-repeat="interval in weather">
                     <div class="temp-{{ interval.main.temp | celciusFilter }} box">
                         <div class="temperature">
+                            <!-- {{sunset}}
+                            {{sunrise}} -->
                             <img src="https://maxcdn.icons8.com/iOS7/PNG/75/Weather/{{ interval.weather[0].main | weatherFilter: interval.weather[0].main }}-75.png" width="75">
                             <span>{{ interval.main.temp | celciusFilter }} &deg;c</span>
                             <p>
                                 <span>{{ interval.dt * 1000 | date:'HH:mma' }}</span>
                                 <span>{{ interval.dt * 1000 | date:'EEEE, d MMMM' }}</span>
+                                <!-- <span>{{ interval.dt * 1000 }}</span> -->
                             </p>
                         </div>
                     </div>
@@ -47,7 +64,8 @@
             </ul>
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+        <script src="/node_modules/angular/angular.min.js"></script>
+        <script src="/node_modules/moment/min/moment.min.js"></script>
         <script src="src/js/app.js"></script>
     </body>
 </html>

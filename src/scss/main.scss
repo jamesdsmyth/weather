@@ -132,6 +132,22 @@ html {
 					padding: 10px;
 				}
 
+				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					color: #7e7e7e;
+				}
+
+				::-moz-placeholder { /* Firefox 19+ */
+					color: #7e7e7e;
+				}
+
+				:-ms-input-placeholder { /* IE 10+ */
+					color: #7e7e7e;
+				}
+
+				:-moz-placeholder { /* Firefox 18- */
+					color: #7e7e7e;
+				}
+
 				.search-city-click {
 					border: none;
 				    height: 55px;
@@ -168,6 +184,10 @@ html {
 	            float: left;
 	            display: block;
 				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
 	        }
 	    }
 
@@ -211,6 +231,14 @@ html {
 				p {
 					font-size: 1.5em;
 				}
+			}
+
+			.return-arrow {
+				position: absolute;
+				top: 0;
+				left: 20px;
+				display: block;
+				cursor: pointer;
 			}
 		}
 
