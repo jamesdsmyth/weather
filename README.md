@@ -5,6 +5,8 @@ Weather rainbow is a simple application using AngularJS that visually shows you 
 
 ![Weather rainbow screengrab 1](src/images/screengrab-1.jpg)
 
+![Weather rainbow screengrab 2](src/images/screengrab-2.jpg)
+
 ### How to run
 
 1. `git clone` repo
