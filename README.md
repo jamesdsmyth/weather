@@ -3,6 +3,8 @@ Weather rainbow
 
 Weather rainbow is a simple application using AngularJS that visually shows you the weather temperature using colours as well as numbers. This is just a fun little project to see whether we visualise and understand the temperature better using a colour than if we had just read the temperature.
 
+![Weather rainbow screengrab 1](src/images/screengrab-1.jpg)
+
 ### How to run
 
 1. `git clone` repo
